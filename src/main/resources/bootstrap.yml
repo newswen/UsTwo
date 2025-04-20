@@ -1,0 +1,25 @@
+server:
+  port: 1104
+spring:
+  application:
+    name: usTwo
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 116.205.112.70:8848
+        #没有后缀名报错
+        file-extension: yaml
+        username: nacos
+        password: nacos
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#mybatis-plus:
+#  #config-location: classpath:mybatis/mybatis-config.xml  #?????
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+#  type-aliases-package: org.example.xiaomaibu.mybatis.entity
