@@ -1,6 +1,5 @@
 package com.yw.ustwobacked.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,11 +23,12 @@ public class StudyK8sController {
     @GetMapping("/studyK8s")
     public String studyK8s(){
         String host = "unknown";
+        String dbUrl = System.getenv("DB_URL");  // 获取环境变量 DB_URL
         try {
             host = InetAddress.getLocalHost().getHostName();
         } catch (UnknownHostException e) {
             log.error("测试k8s有问题",e);
         }
-        return String.format("[v3] Hello, Kubernetes!, From host: %s", host);
+        return String.format("[v4] Hello, Kubernetes! From host: %s, Get Database Connect URL: %s", host, dbUrl);
     }
 }
