@@ -1,1 +1,1 @@
-docker build -t newswen/ustwo:v1 .
+docker build -t newswen/ustwo:v3 .
