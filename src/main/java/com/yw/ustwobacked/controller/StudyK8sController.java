@@ -29,6 +29,6 @@ public class StudyK8sController {
         } catch (UnknownHostException e) {
             log.error("测试k8s有问题",e);
         }
-        return String.format("[v4] Hello, Kubernetes! From host: %s, Get Database Connect URL: %s", host, dbUrl);
+        return String.format("[v5-测试镜像标签不变] Hello, Kubernetes! From host: %s, Get Database Connect URL: %s", host, dbUrl);
     }
 }
